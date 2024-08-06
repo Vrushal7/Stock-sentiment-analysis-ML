@@ -12,3 +12,15 @@ list1= [i for i in range(25)]
 new_Index=[str(i) for i in list1]
 data.columns= new_Index
 data.head(5)
+
+# Convertng headlines to lower case
+for index in new_Index:
+    data[index]=data[index].str.lower()
+data.head(1)
+
+' '.join(str(x) for x in data.iloc[1,0:25])
+headlines = []
+for row in range(0,len(data.index)):
+    headlines.append(' '.join(str(x) for x in data.iloc[row,0:25]))
+
+    headlines[0]
