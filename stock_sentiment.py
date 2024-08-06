@@ -23,4 +23,7 @@ headlines = []
 for row in range(0,len(data.index)):
     headlines.append(' '.join(str(x) for x in data.iloc[row,0:25]))
 
-    headlines[0]
+headlines[0]
+
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.ensemble import RandomForestClassifier
